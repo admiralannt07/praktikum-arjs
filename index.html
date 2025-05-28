@@ -12,8 +12,8 @@
          - 'embedded': menyesuaikan dengan halaman web
          - 'arjs': menggunakan kamera dan menyembunyikan UI debug -->
     <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
-      <!-- Hiro marker menggunakan tag a-marker dengan atribut preset="hiro" yang di dalamnya ada 2 entity berformat 3d model -->
-      <a-marker preset="hiro">
+      <!-- Menggunakan custom marker batman dan joker  -->
+      <a-marker type="pattern" url="marker/pattern-batman-joker.patt">
         <!-- Batman model 
           - position: menempatkan model di posisi x, y, z
           - scale: menyesuaikan ukuran model
@@ -23,10 +23,10 @@
         -->
         <a-entity
           position="-1 0 0"
-          scale="1 1 1"
+          scale="0.8 0.8 0.8"
           gltf-model="models/bruce_wayne_batman.glb"
           rotation="0 90 0"
-          animation="property: rotation; to: 0 90 0; dur: 5000; easing: linear; loop: true">
+          animation="property: rotation; to: 0 360 0; dur: 5000; easing: linear; loop: true">
         </a-entity>
         
         <!-- Joker model 
@@ -38,10 +38,10 @@
         -->
         <a-entity
           position="1 0 0"
-          scale="1 1 1"
+          scale="0.8 0.8 0.8"
           gltf-model="models/joker.glb"
           rotation="0 -90 0"
-          animation="property: rotation; to: 0 -90 0; dur: 5000; easing: linear; loop: true">
+          animation="property: rotation; to: 0 -360 0; dur: 5000; easing: linear; loop: true">
         </a-entity>
       </a-marker>
 
